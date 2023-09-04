@@ -55,8 +55,8 @@ namespace HW37_2
         {
             Console.Clear();
             Console.WriteLine("книги, которые вы читаете:");
-            foreach(var book in _dic)
-                Console.WriteLine($"{book.Key} - {book.Value}%");
+            Parallel.ForEach(_dic, (keyValue) => 
+            Console.WriteLine($"{keyValue.Key} - {keyValue.Value}%"));
             MainMenu();
         }
         static void Reading(string book)
